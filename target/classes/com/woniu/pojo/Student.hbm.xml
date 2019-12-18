@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="student" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.Student" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="student">
+        <id name="stuId" type="java.lang.Integer">
+            <column name="stuId"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="com.woniu.pojo.Grade" embed-xml="true" fetch="select" insert="true" name="grade" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="gId"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="stuName" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="stuName"/>
+        </property>
+        <property generated="never" lazy="false" name="stuSex" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="stuSex"/>
+        </property>
+        <property generated="never" lazy="false" name="stuCard" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="stuCard"/>
+        </property>
+        <property generated="never" lazy="false" name="inTime" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="inTime"/>
+        </property>
+        <property generated="never" lazy="false" name="outTime" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="outTime"/>
+        </property>
+        <property generated="never" lazy="false" name="stuPhone" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="stuPhone"/>
+        </property>
+        <property generated="never" lazy="false" name="stuAdd" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="stuAdd"/>
+        </property>
+        <property generated="never" lazy="false" name="stuEdu" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="stuEdu"/>
+        </property>
+        <property generated="never" lazy="false" name="stuCollege" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="stuCollege"/>
+        </property>
+        <property generated="never" lazy="false" name="stuMajor" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="stuMajor"/>
+        </property>
+        <property generated="never" lazy="false" name="stuGradu" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="stuGradu"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="exams" optimistic-lock="true" sort="unsorted" table="exam">
+            <key on-delete="noaction">
+                <column name="stuId"/>
+            </key>
+            <one-to-many class="com.woniu.pojo.Exam" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>
