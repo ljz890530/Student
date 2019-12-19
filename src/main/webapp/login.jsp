@@ -6,7 +6,6 @@
         <meta charset="utf-8">
         <title>登录(Login)</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         <!-- CSS -->
        	<style type="text/css">
        		*{ margin:0; padding:0; }
@@ -99,7 +98,6 @@
 			        0 2px 3px 0 rgba(0,0,0,.1) inset,
 			        0 2px 7px 0 rgba(0,0,0,.2);
 			}
-			
 			button {
 			    cursor: pointer;
 			    width: 300px;
@@ -130,7 +128,6 @@
 			    -webkit-transition: all .2s;
 			    -ms-transition: all .2s;
 			}
-			
 			button:hover {
 			    -moz-box-shadow:
 			        0 15px 30px 0 rgba(255,255,255,.15) inset,
@@ -142,7 +139,6 @@
 			        0 15px 30px 0 rgba(255,255,255,.15) inset,
 			        0 2px 7px 0 rgba(0,0,0,.2);
 			}
-			
 			button:active {
 			    -moz-box-shadow:
 			        0 15px 30px 0 rgba(255,255,255,.15) inset,
@@ -156,16 +152,11 @@
 			
 			    border: 0px solid #ef4300;
 			}
-			
-			
-			/*－－－增加部份的CSS－－－*/
 			form,input,button{font-family:Microsoft YaHei,Segoe UI,Tahoma,Arial,Verdana,sans-serif; text-decoration:none; width:100%;}
 			button.submit_button{ font-size:24px; letter-spacing:15px;}
 			input.Captcha{ width:130px; float:left;}
         </style>
-       
     </head>
-
     <body style="background-color:grey">
 
         <div class="page-container">
@@ -174,10 +165,8 @@
                 <input type="text" name="username" class="user.uName" placeholder="请输入您的用户名！">
                 <input type="password" name="password" class="user.uPwd" placeholder="请输入您的用户密码！">
                 			 
-                <button type="submit" class="submit_button">登录</button>
-                
+                <button type="submit" class="submit_button" style="width: 382px">登录</button>
             </form>
-           
         </div>
 		
     </body>
