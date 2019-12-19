@@ -161,11 +161,11 @@
 
         <div class="page-container">
             <h1>Login</h1>
-            <form action="login" method="post">
-                <input type="text" name="username" class="user.uName" placeholder="请输入您的用户名！">
-                <input type="password" name="password" class="user.uPwd" placeholder="请输入您的用户密码！">
-                			 
-                <button type="submit" class="submit_button" style="width: 382px">登录</button>
+            <form action="login.action" method="post">
+               <input type="text"  name="user.uname" placeholder="请输入您的用户名！">
+               <input type="password" name="user.upwd" placeholder="请输入您的用户密码！">
+
+               <button type="submit" class="submit_button" style="width: 382px">登录</button>
             </form>
         </div>
 		
