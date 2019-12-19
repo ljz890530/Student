@@ -3,5 +3,9 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
-	<include file="struts-user.xml"></include>
+	<package name="user" extends="struts-default">
+		<action name="login" class="userAction" method="login">
+			<result name="student">/index.jsp</result>
+		</action>
+	</package>
 </struts>
