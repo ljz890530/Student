@@ -16,6 +16,11 @@ public class User implements java.io.Serializable {
 	private Set gradesForTid = new HashSet(0);
 	private Set userRoles = new HashSet(0);
 
+	@Override
+	public String toString() {
+		return "User [uid=" + uid + ", uname=" + uname + ", upwd=" + upwd + "]";
+	}
+
 	public User() {
 	}
 

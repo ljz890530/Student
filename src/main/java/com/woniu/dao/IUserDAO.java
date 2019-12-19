@@ -7,6 +7,8 @@ import com.woniu.pojo.User;
 
 public interface IUserDAO {
 	void save(User user);
-	List<User> findAll();
+	void update(User user);
 	void delete(User user);
+	User findOne(User user);
+	List<User> findAll();
 }
