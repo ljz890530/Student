@@ -22,5 +22,11 @@ public class UserDAOImpl implements IUserDAO{
 	public List<User> findAll() {
 		return sessionFctory.openSession().createCriteria(User.class).list();
 	}
+
+	@Override
+	public void delete(User user) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
