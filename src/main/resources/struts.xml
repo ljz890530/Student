@@ -4,7 +4,7 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
 	<include file="struts-lader.xml"></include>
-	<include file="struts-userRole.xml"></include>
+	<include file="struts-user.xml"></include>
 	<include file="struts-dir.xml"></include>
 	<include file="struts-stu.xml"></include>
 	<include file="struts-tea.xml"></include>
