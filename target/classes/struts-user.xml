@@ -23,6 +23,7 @@
 		
 		<action name="login" class="userAction" method="login">
 			<result name="student">/lader_show.jsp</result>
+			<result name="teacher">/tea_index.jsp</result>
 		</action>
 		<action name="exit" class="userAction" method="exit">
 			<result name="success">/login.jsp</result>
