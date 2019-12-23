@@ -6,6 +6,7 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.woniu.pojo.User;
 import com.woniu.pojo.UserRole;
 import com.woniu.service.IUserService;
@@ -22,13 +23,16 @@ public class UserAction {
 		this.user = user;
 	}
 	
-	public String save() {
-		us.save(user);
-		return "success";
-	}
+	//登录
 	public String login() {
-		System.out.println(user);
+		
 		User u = us.findOne(user);
+		if(u!=null) {
+			//登录成功后将用户信息存放到session中
+			ActionContext.getContext().getSession().put("loginUser", u);
+		}
+		
+		//根据权限跳转不同界面
 		Set<UserRole> userRoles = u.getUserRoles();
 		Iterator<UserRole> iterator = userRoles.iterator();
 		int rid = 0;
@@ -52,5 +56,11 @@ public class UserAction {
 			return "director";
 		}
 		return "fail";
+	}
+	
+	//安全退出
+	public String exit() {
+		ActionContext.getContext().getSession().remove("loginUser");
+		return "success";
 	}
 }

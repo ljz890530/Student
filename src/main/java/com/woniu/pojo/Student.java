@@ -1,5 +1,5 @@
 package com.woniu.pojo;
-// Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final
+// Generated 2019-12-20 11:15:59 by Hibernate Tools 5.4.7.Final
 
 import java.util.Date;
 import java.util.HashSet;
@@ -11,7 +11,6 @@ import java.util.Set;
 public class Student implements java.io.Serializable {
 
 	private Integer stuId;
-	private Grade grade;
 	private String stuName;
 	private String stuSex;
 	private String stuCard;
@@ -23,15 +22,14 @@ public class Student implements java.io.Serializable {
 	private String stuCollege;
 	private String stuMajor;
 	private Date stuGradu;
+	private Integer gid;
 	private Set exams = new HashSet(0);
 
 	public Student() {
 	}
 
-	public Student(Grade grade, String stuName, String stuSex, String stuCard, Date inTime, Date outTime,
-			String stuPhone, String stuAdd, String stuEdu, String stuCollege, String stuMajor, Date stuGradu,
-			Set exams) {
-		this.grade = grade;
+	public Student(String stuName, String stuSex, String stuCard, Date inTime, Date outTime, String stuPhone,
+			String stuAdd, String stuEdu, String stuCollege, String stuMajor, Date stuGradu, Integer gid, Set exams) {
 		this.stuName = stuName;
 		this.stuSex = stuSex;
 		this.stuCard = stuCard;
@@ -43,6 +41,7 @@ public class Student implements java.io.Serializable {
 		this.stuCollege = stuCollege;
 		this.stuMajor = stuMajor;
 		this.stuGradu = stuGradu;
+		this.gid = gid;
 		this.exams = exams;
 	}
 
@@ -52,14 +51,6 @@ public class Student implements java.io.Serializable {
 
 	public void setStuId(Integer stuId) {
 		this.stuId = stuId;
-	}
-
-	public Grade getGrade() {
-		return this.grade;
-	}
-
-	public void setGrade(Grade grade) {
-		this.grade = grade;
 	}
 
 	public String getStuName() {
@@ -150,6 +141,14 @@ public class Student implements java.io.Serializable {
 		this.stuGradu = stuGradu;
 	}
 
+	public Integer getGid() {
+		return this.gid;
+	}
+
+	public void setGid(Integer gid) {
+		this.gid = gid;
+	}
+
 	public Set getExams() {
 		return this.exams;
 	}
@@ -158,12 +157,4 @@ public class Student implements java.io.Serializable {
 		this.exams = exams;
 	}
 
-	@Override
-	public String toString() {
-		return "Student [stuId=" + stuId + ", grade=" + grade + ", stuName=" + stuName + ", stuSex=" + stuSex
-				+ ", stuCard=" + stuCard + ", inTime=" + inTime + ", outTime=" + outTime + ", stuPhone=" + stuPhone
-				+ ", stuAdd=" + stuAdd + ", stuEdu=" + stuEdu + ", stuCollege=" + stuCollege + ", stuMajor=" + stuMajor
-				;
-	}
-	
 }

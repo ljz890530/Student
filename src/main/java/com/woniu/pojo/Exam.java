@@ -1,5 +1,5 @@
 package com.woniu.pojo;
-// Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final
+// Generated 2019-12-20 11:15:59 by Hibernate Tools 5.4.7.Final
 
 import java.util.Date;
 
@@ -9,17 +9,17 @@ import java.util.Date;
 public class Exam implements java.io.Serializable {
 
 	private Integer eid;
-	private Stage stage;
 	private Student student;
+	private Integer staId;
 	private Integer escore;
 	private Date edate;
 
 	public Exam() {
 	}
 
-	public Exam(Stage stage, Student student, Integer escore, Date edate) {
-		this.stage = stage;
+	public Exam(Student student, Integer staId, Integer escore, Date edate) {
 		this.student = student;
+		this.staId = staId;
 		this.escore = escore;
 		this.edate = edate;
 	}
@@ -32,20 +32,20 @@ public class Exam implements java.io.Serializable {
 		this.eid = eid;
 	}
 
-	public Stage getStage() {
-		return this.stage;
-	}
-
-	public void setStage(Stage stage) {
-		this.stage = stage;
-	}
-
 	public Student getStudent() {
 		return this.student;
 	}
 
 	public void setStudent(Student student) {
 		this.student = student;
+	}
+
+	public Integer getStaId() {
+		return this.staId;
+	}
+
+	public void setStaId(Integer staId) {
+		this.staId = staId;
 	}
 
 	public Integer getEscore() {

@@ -4,6 +4,23 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
 	<package name="student" extends="struts-default">
+		<!-- 拦截器配置 -->
+		<interceptors>
+			<!-- 登录拦截器 -->
+			<interceptor name="loginInterceptor" class="com.woniu.util.LoginInterceptor"></interceptor>
+			<!-- 拦截器栈 -->
+			<interceptor-stack name="systemStack">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="loginInterceptor"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<!-- 定义系统默认拦截器 -->
+		<default-interceptor-ref name="systemStack"></default-interceptor-ref>
+		<!-- 全局结果视图 -->
+        <global-results>
+            <result name="login" type="redirect">/login.jsp</result>
+        </global-results>
+        
 		<action name="addStu" class="stuAction" method="addStu">
 			<result>/lader_show.jsp</result>
 		</action>

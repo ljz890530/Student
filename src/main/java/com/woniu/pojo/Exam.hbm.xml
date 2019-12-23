@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-12-20 11:15:59 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
     <class catalog="student" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.Exam" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="exam">
         <id name="eid" type="java.lang.Integer">
             <column name="eId"/>
             <generator class="identity"/>
         </id>
-        <many-to-one class="com.woniu.pojo.Stage" embed-xml="true" fetch="select" insert="true" name="stage" not-found="exception" optimistic-lock="true" unique="false" update="true">
-            <column name="staId"/>
-        </many-to-one>
         <many-to-one class="com.woniu.pojo.Student" embed-xml="true" fetch="select" insert="true" name="student" not-found="exception" optimistic-lock="true" unique="false" update="true">
             <column name="stuId"/>
         </many-to-one>
+        <property generated="never" lazy="false" name="staId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="staId"/>
+        </property>
         <property generated="never" lazy="false" name="escore" optimistic-lock="true" type="java.lang.Integer" unique="false">
             <column name="eScore"/>
         </property>

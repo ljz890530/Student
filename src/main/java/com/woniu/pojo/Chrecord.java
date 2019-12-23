@@ -1,5 +1,5 @@
 package com.woniu.pojo;
-// Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final
+// Generated 2019-12-20 10:33:45 by Hibernate Tools 5.4.7.Final
 
 import java.util.Date;
 
@@ -9,17 +9,17 @@ import java.util.Date;
 public class Chrecord implements java.io.Serializable {
 
 	private Integer chReId;
-	private Check check;
-	private Integer stuId;
+	private Student student;
 	private Date chReTime;
+	private Integer chId;
 
 	public Chrecord() {
 	}
 
-	public Chrecord(Check check, Integer stuId, Date chReTime) {
-		this.check = check;
-		this.stuId = stuId;
+	public Chrecord(Student student, Date chReTime, Integer chId) {
+		this.student = student;
 		this.chReTime = chReTime;
+		this.chId = chId;
 	}
 
 	public Integer getChReId() {
@@ -30,20 +30,12 @@ public class Chrecord implements java.io.Serializable {
 		this.chReId = chReId;
 	}
 
-	public Check getCheck() {
-		return this.check;
+	public Student getStudent() {
+		return this.student;
 	}
 
-	public void setCheck(Check check) {
-		this.check = check;
-	}
-
-	public Integer getStuId() {
-		return this.stuId;
-	}
-
-	public void setStuId(Integer stuId) {
-		this.stuId = stuId;
+	public void setStudent(Student student) {
+		this.student = student;
 	}
 
 	public Date getChReTime() {
@@ -52,6 +44,14 @@ public class Chrecord implements java.io.Serializable {
 
 	public void setChReTime(Date chReTime) {
 		this.chReTime = chReTime;
+	}
+
+	public Integer getChId() {
+		return this.chId;
+	}
+
+	public void setChId(Integer chId) {
+		this.chId = chId;
 	}
 
 }

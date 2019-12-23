@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-12-20 11:15:59 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
     <class catalog="student" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.Student" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="student">
         <id name="stuId" type="java.lang.Integer">
             <column name="stuId"/>
             <generator class="identity"/>
         </id>
-        <many-to-one class="com.woniu.pojo.Grade" embed-xml="true" fetch="select" insert="true" name="grade" not-found="exception" optimistic-lock="true" unique="false" update="true">
-            <column name="gId"/>
-        </many-to-one>
         <property generated="never" lazy="false" name="stuName" optimistic-lock="true" type="string" unique="false">
             <column length="20" name="stuName"/>
         </property>
@@ -41,6 +38,9 @@
         </property>
         <property generated="never" lazy="false" name="stuGradu" optimistic-lock="true" type="date" unique="false">
             <column length="10" name="stuGradu"/>
+        </property>
+        <property generated="never" lazy="false" name="gid" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="gId"/>
         </property>
         <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="exams" optimistic-lock="true" sort="unsorted" table="exam">
             <key on-delete="noaction">

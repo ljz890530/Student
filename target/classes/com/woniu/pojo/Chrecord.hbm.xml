@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-12-20 10:33:45 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
     <class catalog="student" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.Chrecord" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="chrecord">
         <id name="chReId" type="java.lang.Integer">
             <column name="chReId"/>
             <generator class="identity"/>
         </id>
-        <many-to-one class="com.woniu.pojo.Check" embed-xml="true" fetch="select" insert="true" name="check" not-found="exception" optimistic-lock="true" unique="false" update="true">
-            <column name="chId"/>
-        </many-to-one>
-        <property generated="never" lazy="false" name="stuId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+        <many-to-one class="com.woniu.pojo.Student" embed-xml="true" fetch="select" insert="true" name="student" not-found="exception" optimistic-lock="true" unique="false" update="true">
             <column name="stuId"/>
-        </property>
+        </many-to-one>
         <property generated="never" lazy="false" name="chReTime" optimistic-lock="true" type="date" unique="false">
             <column length="10" name="chReTime"/>
+        </property>
+        <property generated="never" lazy="false" name="chId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="chId"/>
         </property>
     </class>
 </hibernate-mapping>
