@@ -22,17 +22,17 @@ public class UserAction {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	
-	//µÇÂ¼
+	//åœ¨äº‘ç«¯ä¿®æ”¹
+	//ç™»å½•
 	public String login() {
 		
 		User u = us.findOne(user);
 		if(u!=null) {
-			//µÇÂ¼³É¹¦ºó½«ÓÃ»§ĞÅÏ¢´æ·Åµ½sessionÖĞ
+			//ç™»å½•æˆåŠŸåå°†ç”¨æˆ·ä¿¡æ¯å­˜æ”¾åˆ°sessionä¸­
 			ActionContext.getContext().getSession().put("loginUser", u);
 		}
 		
-		//¸ù¾İÈ¨ÏŞÌø×ª²»Í¬½çÃæ
+		//æ ¹æ®æƒé™è·³è½¬ä¸åŒç•Œé¢
 		Set<UserRole> userRoles = u.getUserRoles();
 		Iterator<UserRole> iterator = userRoles.iterator();
 		int rid = 0;
@@ -58,7 +58,7 @@ public class UserAction {
 		return "fail";
 	}
 	
-	//°²È«ÍË³ö
+	//å®‰å…¨é€€å‡º
 	public String exit() {
 		ActionContext.getContext().getSession().remove("loginUser");
 		return "success";
