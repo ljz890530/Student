@@ -22,15 +22,13 @@
 	href="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css"
 	rel="stylesheet">
 <!-- toast CSS -->
-<link
-	href="plugins/bower_components/toast-master/css/jquery.toast.css"
+<link href="plugins/bower_components/toast-master/css/jquery.toast.css"
 	rel="stylesheet">
 <!-- morris CSS -->
 <link href="plugins/bower_components/morrisjs/morris.css"
 	rel="stylesheet">
 <!-- chartist CSS -->
-<link
-	href="plugins/bower_components/chartist-js/dist/chartist.min.css"
+<link href="plugins/bower_components/chartist-js/dist/chartist.min.css"
 	rel="stylesheet">
 <link
 	href="plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css"
@@ -64,14 +62,14 @@
 					<!-- Logo -->
 					<a class="logo" href="dashboard.html"> <!-- Logo icon image, you can use font-icon also -->
 						<b> <!--This is dark logo icon--> <img
-							src="plugins/images/admin-logo.png" alt="home"
-							class="dark-logo" /> <!--This is light logo icon--> <img
+							src="plugins/images/admin-logo.png" alt="home" class="dark-logo" />
+							<!--This is light logo icon--> <img
 							src="plugins/images/admin-logo-dark.png" alt="home"
 							class="light-logo" />
 					</b> <!-- Logo text image you can use text also --> <span
 						class="hidden-xs"> <!--This is dark logo text--> <img
-							src="plugins/images/admin-text.png" alt="home"
-							class="dark-logo" /> <!--This is light logo text--> <img
+							src="plugins/images/admin-text.png" alt="home" class="dark-logo" />
+							<!--This is light logo text--> <img
 							src="plugins/images/admin-text-dark.png" alt="home"
 							class="light-logo" />
 					</span>
@@ -105,18 +103,15 @@
 					</h3>
 				</div>
 				<ul class="nav" id="side-menu">
-					<li style="padding: 70px 0 0;">
-                   	<a href="showCheck.action" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>查看考勤</a>
-                   </li>
-                   <li>
-                   	<a href="showStudentInfo.action" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>学生管理</a>
-                   </li>
-                   <li>
-                   	<a href="showExam.action" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>成绩信息</a>
-                   </li>
-                   <li>
-                       <a href="tea_index.jsp" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>用户管理</a>
-                   </li>
+					<li style="padding: 70px 0 0;"><a href="showCheck.action"
+						class="waves-effect"><i class="fa fa-clock-o fa-fw"
+							aria-hidden="true"></i>查看考勤</a></li>
+					<li><a href="showStudentInfo.action" class="waves-effect"><i
+							class="fa fa-user fa-fw" aria-hidden="true"></i>学生管理</a></li>
+					<li><a href="showExam.action" class="waves-effect"><i
+							class="fa fa-table fa-fw" aria-hidden="true"></i>成绩信息</a></li>
+					<li><a href="tea_index.jsp" class="waves-effect"><i
+							class="fa fa-columns fa-fw" aria-hidden="true"></i>用户管理</a></li>
 				</ul>
 
 			</div>
@@ -148,73 +143,16 @@
 				<!-- Different data widgets -->
 				<!-- ============================================================== -->
 				<!-- .row -->
-				<div class="row">
-					<div class="col-lg-4 col-sm-6 col-xs-12">
-						<div class="white-box analytics-info">
-							<h3 class="box-title">迟到&nbsp;&nbsp;&nbsp;周/次</h3>
-							<ul class="list-inline two-part">
-								<li>
-									<div id="sparklinedash"></div>
-								</li>
-								<li class="text-right"><i class="ti-arrow-up text-success"></i>
-									<span class="counter text-success">659</span></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6 col-xs-12">
-						<div class="white-box analytics-info">
-							<h3 class="box-title">早退&nbsp;&nbsp;&nbsp;周/次</h3>
-							<ul class="list-inline two-part">
-								<li>
-									<div id="sparklinedash2"></div>
-								</li>
-								<li class="text-right"><i class="ti-arrow-up text-purple"></i>
-									<span class="counter text-purple">869</span></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6 col-xs-12">
-						<div class="white-box analytics-info">
-							<h3 class="box-title">旷课&nbsp;&nbsp;&nbsp;周/次</h3>
-							<ul class="list-inline two-part">
-								<li>
-									<div id="sparklinedash3"></div>
-								</li>
-								<li class="text-right"><i class="ti-arrow-up text-info"></i>
-									<span class="counter text-info">911</span></li>
-							</ul>
-						</div>
-					</div>
-				</div>
+
 				<!--/.row -->
-				<!--row -->
-				<!-- /.row -->
-				<div class="row">
-					<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-						<div class="white-box">
-							<h3 class="box-title">学员考勤情况</h3>
-							<ul class="list-inline text-right">
-								<li>
-									<h5>
-										<i class="fa fa-circle m-r-5 text-danger"></i>旷课
-									</h5>
-								</li>
-								<li>
-									<h5>
-										<i class="fa fa-circle m-r-5 text-info"></i>早退
-									</h5>
-								</li>
-								<li>
-									<h5>
-										<i class="fa fa-circle m-r-5 text-inverse"></i>迟到
-									</h5>
-								</li>
-							</ul>
-							<div id="ct-visits" style="height: 405px;"></div>
-						</div>
-					</div>
-				</div>
-				<!-- ============================================================== -->
+
+
+
+
+				<!-- 可视化数据 -->
+				<div id="chartdiv"></div>
+				<!-- /可视化数据 -->
+
 				<!-- table -->
 				<!-- ============================================================== -->
 				<div class="row">
@@ -222,16 +160,32 @@
 						<div class="white-box">
 							<div class="col-md-3 col-sm-4 col-xs-6 pull-right">
 								<select class="form-control pull-right row b-none">
-									<option>March 2017</option>
-									<option>April 2017</option>
-									<option>May 2017</option>
-									<option>June 2017</option>
-									<option>July 2017</option>
+									<!--======================================= -->
+									<s:iterator value="chrecords" status="i">
+										<option><s:date name="chReTime" format="yyyy-MM-dd" /></option>											format="yyyy-MM-dd" /></option>
+										<!-- 											<tr> -->
+										<%-- 												<td><s:property value="#i.count" /></td> --%>
+										<%-- 												<td class="txt-oflo"><s:property --%>
+										<%-- 														value="student.stuName" /></td> --%>
+										<%-- 												<td><s:property value="student.stuId" /></td> --%>
+										<%-- 												<td class="txt-oflo"><s:date name="chReTime" --%>
+										<%-- 														format="yyyy-MM-dd" /></td> --%>
+										<%-- 												<td><span class="text" id="color"> <s:property --%>
+										<%-- 															value="check.chName" /> --%>
+										<%-- 												</span></td> --%>
+										<!-- 											</tr> -->
+									</s:iterator>
+									<!--======================================= -->
+									<!-- 									<option>March 2017</option> -->
+									<!-- 									<option>April 2017</option> -->
+									<!-- 									<option>May 2017</option> -->
+									<!-- 									<option>June 2017</option> -->
+									<!-- 									<option>July 2017</option> -->
 								</select>
 							</div>
 							<h3 class="box-title">考勤情况</h3>
 							<div class="table-responsive">
-								<table class="table">
+								<table class="table" id="colors">
 									<!-- =======================================================================================================================================-->
 
 
@@ -255,9 +209,9 @@
 												<td><s:property value="student.stuId" /></td>
 												<td class="txt-oflo"><s:date name="chReTime"
 														format="yyyy-MM-dd" /></td>
-												<td><span class="text" id="color"> <s:property
-															value="check.chName" />
-												</span></td>
+												<td>												
+													<span name="color"><s:property value="check.chName" /></span>
+												</td>
 											</tr>
 										</s:iterator>
 									</tbody>
@@ -301,8 +255,7 @@
 	<script
 		src="plugins/bower_components/counterup/jquery.counterup.min.js"></script>
 	<!-- chartist chart -->
-	<script
-		src="plugins/bower_components/chartist-js/dist/chartist.min.js"></script>
+	<script src="plugins/bower_components/chartist-js/dist/chartist.min.js"></script>
 	<script
 		src="plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
 	<!-- Sparkline chart JavaScript -->
@@ -310,9 +263,65 @@
 		src="plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
 	<!-- Custom Theme JavaScript -->
 	<script src="js/custom.min.js"></script>
-	<script src="js/dashboard1.js"></script>
-	<script
-		src="plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+	<script src="js/dashboard2.js"></script>
+	<script src="plugins/bower_components/toast-master/js/jquery.toast.js"></script>
 </body>
+<!--表格出勤状态颜色-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		//alert($("span[name='color']").text);
+// 		if($("#colors span").text()=="正常"){
+// 			$(this).attr("class","text-danger");
+// 		}
+	});
+	</script>
+<!--//表格出勤状态颜色-->
+
+<!-- 可视化数据开始============================================= -->
+<!-- Styles -->
+<style>
+#chartdiv {
+	width: 100%;
+	height: 500px;
+}
+</style>
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="js/dashboard4.js"></script>
+
+<!-- Chart code -->
+<script>
+var data = [{
+    "country": "Dummy",
+    "disabled": true,
+    "litres": 1000,
+    "color": am4core.color("#dadada"),
+    "opacity": 0.3,
+    "strokeDasharray": "4,4"
+}, {
+    "country": "正常",
+    "litres": <%=session.getAttribute("count")%>
+}, {
+    "country": "迟到",
+    "litres": <%=session.getAttribute("late")%>
+}, {
+    "country": "早退",
+    "litres": <%=session.getAttribute("early")%>
+}, {
+    "country": "请假",
+    "litres": <%=session.getAttribute("leave")%>
+}, {
+    "country": "生病",
+    "litres": <%=session.getAttribute("sickness")%>
+}, {
+    "country": "旷课",
+    "litres": <%=session.getAttribute("truant")%>
+}];
+</script>
+<!-- 可视化数据结束============================================= -->
+
+
 
 </html>

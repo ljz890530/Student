@@ -1,13 +1,12 @@
  $(document).ready(function () {
      "use strict";
 
-
-     //ct-visits
      new Chartist.Line('#ct-visits', {
-         labels: ['2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+         labels: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期天'],
          series: [
-    [5, 2, 7, 4, 5, 3, 5, 4]
-    , [2, 5, 2, 6, 2, 5, 2, 4]
+    [5, 2, 7, 4, 5, 3, 5]
+    , [2, 5, 2, 6, 2, 5, 2],
+    , [7, 3, 4, 5, 9, 2, 1]
   ]
      }, {
          top: 0,
@@ -19,7 +18,7 @@
   ],
          axisY: {
              labelInterpolationFnc: function (value) {
-                 return (value / 1) + 'k';
+                 return (value+0.5) + '次';
              }
          },
          showArea: true

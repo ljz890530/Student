@@ -5,9 +5,11 @@ import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.woniu.pojo.Chrecord;
@@ -104,9 +106,47 @@ public class TeacherAction {
 	//查询全部考勤记录
 	public String findAllChrecord() {
 		chrecords=ts.findAllChrecord();
+		Integer count=0;//正常
+		Integer late=0;//迟到
+		Integer early=0;//早退
+		Integer leave=0;//请假
+		Integer sickness=0;//生病
+		Integer truant=0;//旷课
 		for (Chrecord chrecord : chrecords) {
-			System.out.println(chrecord);
+			//System.out.println(chrecord+"====================");
+			if (chrecord.getCheck().getChName().equalsIgnoreCase("正常")) {
+				count++;
+			}
+			if (chrecord.getCheck().getChName().equalsIgnoreCase("迟到")) {
+				late++;
+			}
+			if (chrecord.getCheck().getChName().equalsIgnoreCase("早退")) {
+				early++;
+			}
+			if (chrecord.getCheck().getChName().equalsIgnoreCase("请假")) {
+				leave++;
+			}
+			if (chrecord.getCheck().getChName().equalsIgnoreCase("生病")) {
+				sickness++;
+			}
+			if (chrecord.getCheck().getChName().equalsIgnoreCase("旷课")) {
+				truant++;
+			}
 		}
+		System.out.println("正常:"+count+"");
+		System.out.println("迟到:"+late+"");
+		System.out.println("早退:"+early+"");
+		System.out.println("请假:"+leave+"");
+		System.out.println("生病:"+sickness+"");
+		System.out.println("旷课:"+truant+"");
+		//把迟到早退正常-----发送到页面显示
+		HttpSession session = ServletActionContext.getRequest().getSession();
+		session.setAttribute("count",count);
+		session.setAttribute("late",late);
+		session.setAttribute("early",early);
+		session.setAttribute("leave",leave);
+		session.setAttribute("sickness",sickness);
+		session.setAttribute("truant",truant);
 		return "success";
 	}
 	//查询全部考试信息
@@ -120,9 +160,9 @@ public class TeacherAction {
 		grades=ts.findAllGrade();
 		stages=ts.findAllStage();
 		students=ts.findAllStudent();
-		System.out.println(grades);
-		System.out.println(stages);
-		System.out.println(students);
+//		System.out.println(grades);
+//		System.out.println(stages);
+//		System.out.println(students);
 		return "success";
 	}
 	
@@ -142,7 +182,7 @@ public class TeacherAction {
 		stu.setStuEdu(student.getStuEdu());
 		stu.setStuCollege(student.getStuCollege());
 		//stu.setStuGradu(student.getStuGradu());
-		System.out.println(stu);
+		//System.out.println(stu);
 		
 		ObjectMapper mapper=new ObjectMapper();	
 		PrintWriter pw=null;
@@ -162,7 +202,7 @@ public class TeacherAction {
 	}
 	//修改登入者的账户信息(例如用户名和密码)
 	public String updateUser() {
-		System.out.println("进入action层中的修改帐号方法"+user);
+		//System.out.println("进入action层中的修改帐号方法"+user);
 		ts.updateUser(user);
 		return "success";
 	}

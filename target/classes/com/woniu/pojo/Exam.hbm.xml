@@ -17,7 +17,7 @@
    <column name="eScore"/>
   </property>
   <property lazy="false" name="edate" type="date">
-   <column length="10" name="eDate"/>
+   <column name="eDate"/>
   </property>
  </class>
 </hibernate-mapping>

@@ -20,7 +20,7 @@ public class StuAction {
 		this.stu = stu;
 	}
 
-	//增加学生信息
+	//澧炲姞瀛︾敓淇℃伅
 	 public String addStu() {
 		 System.out.println(stu);
 		 is.save(stu);

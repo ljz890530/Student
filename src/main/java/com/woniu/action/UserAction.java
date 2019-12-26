@@ -46,6 +46,7 @@ public class UserAction {
 				rid = id;
 			}
 		}
+		//System.out.println(rid+"================================");
 		if(rid == 1) {
 			return "student";
 		}
