@@ -181,7 +181,7 @@
 	                                            	<a><button>删除</button></a>
 	                                            	<a href="listChName.action?stuId=${stu.stuId }" ><button>考勤录入</button></a>
 	                                            	<a href="showAllChRecord.action?stuId=${stu.stuId }" ><button>查看考勤</button></a>
-	                                            	<a href="listGradeName.action?stugId=${stu.stuId}"><button>转班</button></a>
+	                                            	<a href="listGradeName.action?stuId=${stu.stuId}&stugId=${stu.gid}"><button>转班</button></a>
 	                                          		
 	                                    		</td>
 	                                    	</tr>

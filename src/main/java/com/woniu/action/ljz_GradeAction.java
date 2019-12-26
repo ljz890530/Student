@@ -19,21 +19,29 @@ public class ljz_GradeAction {
 	
 	private Grade grade;
 	private List<Grade> grades;
-	private Integer stugId;
+	private Integer stuId;//接收show页面传过来的stuId
+	private Integer stugId;//接收show页面传过来的stugId
 	private Integer gradeId;
 	
 	
+	public Integer getStugId() {
+		return stugId;
+	}
+	public void setStugId(Integer stugId) {
+		this.stugId = stugId;
+	}
 	public Integer getGradeId() {
 		return gradeId;
 	}
 	public void setGradeId(Integer gradeId) {
 		this.gradeId = gradeId;
 	}
-	public Integer getStugId() {
-		return stugId;
+	
+	public Integer getStuId() {
+		return stuId;
 	}
-	public void setStugId(Integer stugId) {
-		this.stugId = stugId;
+	public void setStuId(Integer stuId) {
+		this.stuId = stuId;
 	}
 	public ljz_IGradeService getIg() {
 		return ig;
@@ -62,7 +70,7 @@ public class ljz_GradeAction {
 	
 	//修改班级id
 	public String updGrade() {
-		Student stu = is.findOne(stugId);//查出传过来stuId的学生对象
+		Student stu = is.findOne(stuId);//查出传过来stuId的学生对象
 		stu.setGid(gradeId);//下拉列表选中的gid
 		is.update(stu);
 		return "success";

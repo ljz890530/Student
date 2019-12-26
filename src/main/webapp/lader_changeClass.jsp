@@ -142,7 +142,9 @@
                                 <div class="form-group">
                                     <label class="col-md-12">当前班级</label>
                                     <div class="col-md-12">
-                                        1班
+                                        <c:forEach items="${grades }" var="g">
+                                        	<c:if test="${g.gid==stugId }">${g.gname }</c:if>
+                                        </c:forEach>
                                     </div>
                                 </div>
                                 
