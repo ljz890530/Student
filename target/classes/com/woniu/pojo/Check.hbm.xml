@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
                                    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
@@ -19,4 +20,24 @@
    <one-to-many class="com.woniu.pojo.Chrecord"/>
   </set>
  </class>
+=======
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="student" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.Check" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="check">
+        <id name="chId" type="java.lang.Integer">
+            <column name="chId"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="chName" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="chName"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="false" mutable="true" name="chrecords" optimistic-lock="true" sort="unsorted" table="chrecord">
+            <key on-delete="noaction">
+                <column name="chId"/>
+            </key>
+            <one-to-many class="com.woniu.pojo.Chrecord" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 </hibernate-mapping>

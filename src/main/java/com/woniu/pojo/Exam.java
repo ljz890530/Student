@@ -8,6 +8,7 @@ import java.util.Date;
  */
 public class Exam implements java.io.Serializable {
 
+<<<<<<< HEAD
 	private Integer eId;
 	private Stage stage;
 	private Student student;
@@ -80,4 +81,62 @@ public class Exam implements java.io.Serializable {
 	
 
 	
+=======
+	private Integer eid;
+	private Stage stage;
+	private Student student;
+	private Integer escore;
+	private Date edate;
+
+	public Exam() {
+	}
+
+	public Exam(Stage stage, Student student, Integer escore, Date edate) {
+		this.stage = stage;
+		this.student = student;
+		this.escore = escore;
+		this.edate = edate;
+	}
+
+	public Integer getEid() {
+		return this.eid;
+	}
+
+	public void setEid(Integer eid) {
+		this.eid = eid;
+	}
+
+	public Stage getStage() {
+		return this.stage;
+	}
+
+	public void setStage(Stage stage) {
+		this.stage = stage;
+	}
+
+	public Student getStudent() {
+		return this.student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	public Integer getEscore() {
+		return this.escore;
+	}
+
+	public void setEscore(Integer escore) {
+		this.escore = escore;
+	}
+
+	public Date getEdate() {
+		return this.edate;
+	}
+
+	public void setEdate(Date edate) {
+		this.edate = edate;
+	}
+
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 }

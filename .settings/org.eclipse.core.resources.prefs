@@ -1,4 +1,7 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
 encoding//src/main/java/com/woniu/action/ljz_GradeAction.java=GBK
+=======
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 encoding//src/main/webapp/lader_addCheck.jsp=UTF-8
 encoding//src/main/webapp/lader_show.jsp=UTF-8

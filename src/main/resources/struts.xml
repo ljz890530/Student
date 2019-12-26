@@ -3,6 +3,7 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
+<<<<<<< HEAD
 	
 	<include file="struts-lader.xml"></include>
 	<include file="struts-user.xml"></include>
@@ -10,4 +11,13 @@
 	<include file="struts-stu.xml"></include>
 	<include file="struts-tea.xml"></include>
 	<include file="struts-teacher.xml"></include>
+=======
+
+	<include file="struts-lader.xml"></include>
+	<include file="struts-user.xml"></include>
+	<include file="struts-dir.xml"></include>
+	<include file="struts-stu.xml"></include>
+	<include file="struts-tea.xml"></include>
+
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 </struts>

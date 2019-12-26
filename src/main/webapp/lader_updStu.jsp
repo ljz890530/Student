@@ -100,7 +100,11 @@
                                 aria-hidden="true"></i>个人信息</a>
                     </li>
                     <li>
+<<<<<<< HEAD
                         <a href="lader_show.jsp" class="waves-effect"><i class="fa fa-table fa-fw"
+=======
+                        <a href="showAllStu.action" class="waves-effect"><i class="fa fa-table fa-fw"
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
                                 aria-hidden="true"></i>查看学员</a>
                     </li>
                     <li>

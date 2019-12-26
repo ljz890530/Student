@@ -33,5 +33,9 @@
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	<!-- 声明事务 -->
+<<<<<<< HEAD
 	<tx:annotation-driven/>
+=======
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 </beans>

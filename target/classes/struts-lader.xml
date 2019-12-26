@@ -4,6 +4,7 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
 	<package name="student" extends="struts-default">
+<<<<<<< HEAD
 		<!-- 拦截器配置 -->
 		<interceptors>
 			<!-- 登录拦截器 -->
@@ -23,6 +24,37 @@
         
 		<action name="addStu" class="stuAction" method="addStu">
 			<result>/lader_show.jsp</result>
+=======
+		<!-- 显示添加学生界面的班级列表 -->
+		<action name="listAddStuGradeName" class="ljz_StuAction" method="listGradeName">
+			<result>/lader_addStu.jsp</result>
+		</action>
+		<!-- 添加学生 -->
+		<action name="addStu" class="ljz_StuAction" method="addStu">
+			<result type="redirectAction">showAllStu.action</result>
+		</action>
+		<action name="showAllStu" class="ljz_StuAction" method="showAllStu">
+			<result>/lader_show.jsp</result>
+		</action>
+		<action name="listChName" class="ljz_CheckAction" method="getCheckName">
+			<result>/lader_addCheck.jsp</result>
+		</action>
+		<action name="saveCheckRecord" class="ljz_CheckAction" method="saveCheckRecord">
+			<result type="redirectAction">showAllChRecord.action</result>
+		</action>
+		<action name="showAllChRecord" class="ljz_CheckAction" method="showCheckRecord">
+			<result>/lader_chRecord.jsp</result>
+		</action>
+		<action name="listGradeName" class="ljz_GradeAction" method="listGrade">
+			<result>/lader_changeClass.jsp</result>
+		</action>
+		<action name="updStuClass" class="ljz_GradeAction" method="updGrade">
+			<result type="redirectAction">showAllStu.action</result>
+		</action>
+		<!-- excel导入学生名单 -->
+		<action name="stuExcel" class="ljz_GradeAction" method="stuExcel">
+			<result type="redirectAction">showAllStu.action</result>
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 		</action>
 	</package>
 </struts>

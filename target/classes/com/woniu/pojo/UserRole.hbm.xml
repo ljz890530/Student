@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
                                    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
@@ -15,4 +16,21 @@
    <column name="uId"/>
   </many-to-one>
  </class>
+=======
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none">
+    <class catalog="student" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.UserRole" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="user_role">
+        <id name="urId" type="java.lang.Integer">
+            <column name="urId"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="com.woniu.pojo.Role" embed-xml="true" fetch="select" insert="true" name="role" not-found="exception" optimistic-lock="true" unique="false" update="true" lazy="false">
+            <column name="rId"/>
+        </many-to-one>
+        <many-to-one class="com.woniu.pojo.User" embed-xml="true" fetch="select" insert="true" name="user" not-found="exception" optimistic-lock="true" unique="false" update="true" lazy="false">
+            <column name="uId"/>
+        </many-to-one>
+    </class>
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 </hibernate-mapping>

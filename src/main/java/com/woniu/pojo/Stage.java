@@ -65,6 +65,7 @@ public class Stage implements java.io.Serializable {
 		this.exams = exams;
 	}
 
+<<<<<<< HEAD
 	@Override
 	public String toString() {
 		return "Stage [staId=" + staId + ", staName=" + staName + ", staWeek=" + staWeek + "]";
@@ -72,4 +73,6 @@ public class Stage implements java.io.Serializable {
 
 	
 
+=======
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 }

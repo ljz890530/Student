@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
                                    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
@@ -26,4 +27,33 @@
 			<one-to-many class="com.woniu.pojo.Exam" />
 		</set>
 	</class>
+=======
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="student" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.Stage" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="stage">
+        <id name="staId" type="java.lang.Integer">
+            <column name="staId"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="staName" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="staName"/>
+        </property>
+        <property generated="never" lazy="false" name="staWeek" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="staWeek"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="grades" optimistic-lock="true" sort="unsorted" table="grade">
+            <key on-delete="noaction">
+                <column name="staId"/>
+            </key>
+            <one-to-many class="com.woniu.pojo.Grade" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="exams" optimistic-lock="true" sort="unsorted" table="exam">
+            <key on-delete="noaction">
+                <column name="staId"/>
+            </key>
+            <one-to-many class="com.woniu.pojo.Exam" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 </hibernate-mapping>

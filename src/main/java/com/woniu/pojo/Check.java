@@ -47,8 +47,14 @@ public class Check implements java.io.Serializable {
 
 	@Override
 	public String toString() {
+<<<<<<< HEAD
 		return "Check [chId=" + chId + ", chName=" + chName + "]";
 	}
 
 	
+=======
+		return "Check [chId=" + chId + ", chName=" + chName + ", chrecords=" + chrecords + "]";
+	}
+
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 }

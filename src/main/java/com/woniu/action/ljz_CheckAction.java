@@ -75,7 +75,11 @@ public class ljz_CheckAction {
 		Chrecord cord = new Chrecord();
 		Student stu2= new Student();
 		
+<<<<<<< HEAD
 	//	cord.setChId(check.getChId());
+=======
+		cord.setChId(check.getChId());
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 		stu2.setStuId(stuId);
 		
 		System.out.println(stu);
