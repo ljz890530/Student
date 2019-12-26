@@ -1,16 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
     <title>Ample Admin Template - The Ultimate Multipurpose admin template</title>
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -121,77 +117,36 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">学生信息</h4>
+                        <h4 class="page-title">添加学员</h4>
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                        
                         <ol class="breadcrumb">
                         </ol>
                     </div>
-                    <!-- /.col-lg-12 -->
+                   
                 </div>
                 <!-- /row -->
                 <div class="row">
                     <div class="col-sm-12">
+                        <!--  -->
                         <div class="white-box">
-                            <h3 class="box-title">22期开发班学员表</h3>
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>序号</th>
-                                            <th>学员姓名</th>
-                                            <th>性别</th>
-                                            <th>身份证号</th>
-                                            <th>联系电话</th>
-                                            <th>家庭住址</th>
-                                            <th>学历</th>
-                                            <th>专业</th>
-                                            <th>毕业院校</th>
-                                            <th>毕业时间</th>
-                                            <th>入班时间</th>
-                                            <th>出班时间</th>
-                                            <th>当前班级</th>
-                                            <th>操作</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-	                                    <c:forEach items="${stus }" var="stu" varStatus="i">
-	                                    
-	                                    	<tr>
-	                                    		<td>${i.count }</td>
-	                                    		<td>${stu.stuName }</td>
-	                                    		<td>${stu.stuSex}</td>
-	                                    		<td>${stu.stuCard }</td>
-	                                    		<td>${stu.stuPhone}</td>
-	                                    		<td>${stu.stuAdd}</td>
-	                                    		<td>${stu.stuEdu}</td>
-	                                    		<td>${stu.stuCollege}</td>
-	                                    		<td>${stu.stuMajor}</td>
-	                                    		<td>${stu.stuGradu}</td>
-	                                    		<td>${stu.inTime}</td>
-	                                    		<td>${stu.outTime}</td>
-	                                    		<td>
-	                                    			<c:forEach items="${grades }" var="g">
-	                                    				<c:if test="${g.gid==stu.gid }">${g.gname }</c:if>
-	                                    			</c:forEach>
-	                                    		</td>
-	                                    		<td>
-	                                    			<a href="lader_updStu.jsp"><button>修改</button></a>
-	                                            	<a><button>删除</button></a>
-	                                            	<a href="listChName.action?stuId=${stu.stuId }" ><button>考勤录入</button></a>
-	                                            	<a href="showAllChRecord.action?stuId=${stu.stuId }" ><button>查看考勤</button></a>
-	                                            	<a href="listGradeName.action?stuId=${stu.stuId}&stugId=${stu.gid}"><button>转班</button></a>
-	                                          		
-	                                    		</td>
-	                                    	</tr>
-	                                    	
-	                                    </c:forEach>
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
+                            <form class="form-horizontal form-material" action="stuExcel.action" method="post" enctype="multipart/form-data">
+                            	<!--文件域-->
+                                <div class="form-group">
+                                    <label class="col-md-12">选择文件</label>
+                                    <div class="col-md-12">
+                                        <input type="file" 
+                                            class="form-control form-control-line" name="stuExcel"> </div>
+                                </div>
+                               
+                               <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-success">提交</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
+                        
                     </div>
                 </div>
                 <!-- /.row -->
