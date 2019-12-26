@@ -138,6 +138,13 @@
                     <div class="col-sm-12">
                         <div class="white-box">
                             <form class="form-horizontal form-material" action="updStuClass.action" method="post">
+                                <!--当前班级-->
+                                <div class="form-group">
+                                    <label class="col-md-12">当前班级</label>
+                                    <div class="col-md-12">
+                                        1班
+                                    </div>
+                                </div>
                                 
                                 <div class="form-group">
                                     <label class="col-sm-12">转班选择</label>

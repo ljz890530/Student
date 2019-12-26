@@ -63,9 +63,7 @@ public class ljz_GradeAction {
 	//修改班级id
 	public String updGrade() {
 		Student stu = is.findOne(stugId);//查出传过来stuId的学生对象
-		System.out.println(stu);
 		stu.setGid(gradeId);//下拉列表选中的gid
-		System.out.println(stu);
 		is.update(stu);
 		return "success";
 	}
