@@ -10,10 +10,8 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.woniu.dao.ljz_ICheckDAO;
 import com.woniu.dao.ljz_ICheckRecordDAO;
 import com.woniu.pojo.Chrecord;
-import com.woniu.pojo.Student;
 import com.woniu.service.ljz_ICheckRecordService;
 @Service
 @Transactional
