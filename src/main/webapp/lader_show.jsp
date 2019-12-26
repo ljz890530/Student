@@ -105,7 +105,7 @@
                                 aria-hidden="true"></i>查看学员</a>
                     </li>
                     <li>
-                        <a href="lader_addStu.jsp" class="waves-effect"><i class="fa fa-font fa-fw"
+                        <a href="listAddStuGradeName.action" class="waves-effect"><i class="fa fa-font fa-fw"
                                 aria-hidden="true"></i>添加学员</a>
                     </li>
                 </ul>

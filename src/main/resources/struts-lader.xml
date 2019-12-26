@@ -4,6 +4,11 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
 	<package name="student" extends="struts-default">
+		<!-- 显示添加学生界面的班级列表 -->
+		<action name="listAddStuGradeName" class="ljz_StuAction" method="listGradeName">
+			<result>/lader_addStu.jsp</result>
+		</action>
+		<!-- 添加学生 -->
 		<action name="addStu" class="ljz_StuAction" method="addStu">
 			<result type="redirectAction">showAllStu.action</result>
 		</action>

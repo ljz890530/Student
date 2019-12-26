@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -203,11 +204,10 @@
                                 <div class="form-group">
                                     <label class="col-sm-12">所属班级</label>
                                     <div class="col-sm-12">
-                                        <select class="form-control form-control-line" name="stu.gRade.gType">
-                                            <option>1班</option>
-                                            <option>22期</option>
-                                            <option>22期</option>
-                                            <option>22期</option>
+                                        <select class="form-control form-control-line" name="stu.gid">
+                                        	<c:forEach items="${grades }" var="g">
+                                        		<option value="${g.gid }">${g.gname }</option>
+                                        	</c:forEach>
                                         </select>
                                     </div>
                                 </div>
