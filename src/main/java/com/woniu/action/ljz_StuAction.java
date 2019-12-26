@@ -1,11 +1,6 @@
 package com.woniu.action;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -55,7 +50,11 @@ public class ljz_StuAction {
 		 is.save(stu);
 		 return "success";
 	 }
-	 
+	 //显示添加学生里班级的下拉列表
+	 public String listGradeName() {
+		 grades = ig.findAll();//找到所有班级给页面
+		 return "success";
+	 }
 	 //查看所有学生信息
 	 public String showAllStu() {
 		 grades = ig.findAll();
