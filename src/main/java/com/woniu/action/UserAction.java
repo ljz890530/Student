@@ -3,6 +3,9 @@ package com.woniu.action;
 import java.util.Iterator;
 import java.util.Set;
 
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -47,6 +50,11 @@ public class UserAction {
 			return "student";
 		}
 		if(rid == 2) {
+			//改动者:侯伟民
+			//功能:把用户名和id通过session作用域传递到页面
+			HttpSession session = ServletActionContext.getRequest().getSession();
+			session.setAttribute("name",us.findOne(user).getUname());
+			session.setAttribute("id", us.findOne(user).getUid());
 			return "teacher";
 		}
 		if(rid == 3) {

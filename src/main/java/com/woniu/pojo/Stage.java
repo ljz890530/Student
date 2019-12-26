@@ -65,4 +65,11 @@ public class Stage implements java.io.Serializable {
 		this.exams = exams;
 	}
 
+	@Override
+	public String toString() {
+		return "Stage [staId=" + staId + ", staName=" + staName + ", staWeek=" + staWeek + "]";
+	}
+
+	
+
 }

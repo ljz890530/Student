@@ -128,7 +128,7 @@ public class TeacherAction {
 	
 	//根据页面ajax的请求(发送的学生id,返回去所有的信息)
 	public String studentInfo() {
-		Student student=ts.studentfindOneById(1);
+		Student student=ts.studentfindOneById(id);
 		Stu stu=new Stu();
 		stu.setStuId(student.getStuId());
 		stu.setStuName(student.getStuName());

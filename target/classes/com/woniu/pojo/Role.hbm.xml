@@ -1,19 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping auto-import="true" default-access="property" default-cascade="none">
-    <class catalog="student" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.Role" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="role">
-        <id name="rid" type="java.lang.Integer">
-            <column name="rId"/>
-            <generator class="identity"/>
-        </id>
-        <property generated="never" lazy="false" name="rname" optimistic-lock="true" type="string" unique="false">
-            <column length="20" name="rName"/>
-        </property>
-        <set embed-xml="true" fetch="select" inverse="true" lazy="false" mutable="true" name="userRoles" optimistic-lock="true" sort="unsorted" table="user_role">
-            <key on-delete="noaction">
-                <column name="rId"/>
-            </key>
-            <one-to-many class="com.woniu.pojo.UserRole" embed-xml="true" not-found="exception"/>
-        </set>
-    </class>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final -->
+<hibernate-mapping auto-import="false" default-lazy="false">
+ <class catalog="student" name="com.woniu.pojo.Role" table="role">
+  <id name="rid" type="java.lang.Integer">
+   <column name="rId"/>
+   <generator class="identity"/>
+  </id>
+  <property generated="never" lazy="false" name="rname" type="string">
+   <column length="20" name="rName"/>
+  </property>
+  <set fetch="select" inverse="true" lazy="true" name="userRoles"
+   sort="unsorted" table="user_role">
+   <key>
+    <column name="rId"/>
+   </key>
+   <one-to-many class="com.woniu.pojo.UserRole"/>
+  </set>
+ </class>
 </hibernate-mapping>

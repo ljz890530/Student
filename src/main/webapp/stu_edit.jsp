@@ -136,28 +136,30 @@
                 <div class="row">
                     <div class="col-md-4 col-xs-12">
                         <div class="white-box">
-                            <div class="user-bg"> <img width="100%" alt="user" src="plugins/images/large/img1.jpg">
+                            <div class="user-bg"> <img width="100%" alt="user" src="plugins/images/large/zi.jpg">
                                 <div class="overlay-box">
                                     <div class="user-content">
                                         <a href="javascript:void(0)"><img src="plugins/images/users/genu.jpg"
                                                 class="thumb-lg img-circle" alt="img"></a>
-                                        <h4 class="text-white">学生姓名</h4>
+                                        <h4 class="text-white" id="name"></h4>
                                         <h5 class="text-white">班级：163班</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="user-btm-box">
                                 <div class="col-md-4 col-sm-4 text-center">
-                                    <p class="text-purple"><i class="ti-facebook"></i></p>
-                                    <h1>258</h1>
+                                    <p class="text-purple"><i class="ti-facebook">性别</i></p>
+                                    <h1 id="sex"></h1>
                                 </div>
                                 <div class="col-md-4 col-sm-4 text-center">
-                                    <p class="text-blue"><i class="ti-twitter"></i></p>
-                                    <h1>125</h1>
+                                    <p class="text-blue"><i class="ti-twitter">地址</i></p>
+                                    <h1 id="site"></h1>
                                 </div>
                                 <div class="col-md-4 col-sm-4 text-center">
-                                    <p class="text-danger"><i class="ti-dribbble"></i></p>
-                                    <h1>556</h1>
+                                    <p class="text-danger"><i class="ti-dribbble">电话号码</i></p>
+                                    <div style="margin-top:15px;">
+                                    	<h2 id="phone"></h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -263,11 +265,11 @@
 					dataType:"json",
 					scriptCharset:'utf-8',
 					success:function(data){
-						 alert(data["stuName"]);  
-					    // alert(data["password"]);  
-// 						$.each(data,function(index,obj){
-// 							alert(obj.stuId);
-// 						})
+						// alert(data["stuName"]); 
+						$("#sex").text(data["stuSex"]);
+						$("#site").text(data["stuAdd"]);
+						$("#phone").text(data["stuPhone"]);
+						$("#name").text(data["stuName"]);
 					}
 				});
 			})			

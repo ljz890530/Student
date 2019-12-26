@@ -1,34 +1,36 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping auto-import="true" default-access="property" default-cascade="none">
-    <class catalog="student" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.User" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="user">
-        <id name="uid" type="java.lang.Integer">
-            <column name="uId"/>
-            <generator class="identity"/>
-        </id>
-        <property generated="never" lazy="false" name="uname" optimistic-lock="true" type="string" unique="false">
-            <column length="20" name="uName"/>
-        </property>
-        <property generated="never" lazy="false" name="upwd" optimistic-lock="true" type="string" unique="false">
-            <column length="30" name="uPwd"/>
-        </property>
-        <set embed-xml="true" fetch="select" inverse="true" lazy="false" mutable="true" name="gradesForHid" optimistic-lock="true" sort="unsorted" table="grade">
-            <key on-delete="noaction">
-                <column name="hId"/>
-            </key>
-            <one-to-many class="com.woniu.pojo.Grade" embed-xml="true" not-found="exception"/>
-        </set>
-        <set embed-xml="true" fetch="select" inverse="true" lazy="false" mutable="true" name="gradesForTid" optimistic-lock="true" sort="unsorted" table="grade">
-            <key on-delete="noaction">
-                <column name="tId"/>
-            </key>
-            <one-to-many class="com.woniu.pojo.Grade" embed-xml="true" not-found="exception"/>
-        </set>
-        <set embed-xml="true" fetch="select" inverse="true" lazy="false" mutable="true" name="userRoles" optimistic-lock="true" sort="unsorted" table="user_role">
-            <key on-delete="noaction">
-                <column name="uId"/>
-            </key>
-            <one-to-many class="com.woniu.pojo.UserRole" embed-xml="true" not-found="exception"/>
-        </set>
-    </class>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final -->
+<hibernate-mapping auto-import="false" default-lazy="false">
+ <class catalog="student" name="com.woniu.pojo.User" table="user">
+  <id name="uid" type="java.lang.Integer">
+   <column name="uId"/>
+   <generator class="identity"/>
+  </id>
+  <property lazy="false" name="uname" type="string">
+   <column name="uName"/>
+  </property>
+  <property lazy="false" name="upwd" type="string">
+   <column name="uPwd"/>
+  </property>
+  <set name="gradesForHid" table="grade" cascade="save-update">
+   <key>
+    <column name="hId"/>
+   </key>
+   <one-to-many class="com.woniu.pojo.Grade"/>
+  </set>
+  <set name="gradesForTid" table="grade" cascade="save-update">
+   <key>
+    <column name="tId"/>
+   </key>
+   <one-to-many class="com.woniu.pojo.Grade"/>
+  </set>
+  <set name="userRoles" table="user_role" cascade="save-update">
+   <key>
+    <column name="uId"/>
+   </key>
+   <one-to-many class="com.woniu.pojo.UserRole"/>
+  </set>
+ </class>
 </hibernate-mapping>

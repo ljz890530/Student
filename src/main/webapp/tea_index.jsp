@@ -129,7 +129,7 @@
 						<div class="col-md-12">
 							<input type="text" placeholder="Name"
 								class="form-control form-control-line"
-								value=" <%=session.getAttribute("name")%>" name="user.uname">
+								value="<%=session.getAttribute("name")%>" name="user.uname">
 							<input type="hidden" name="user.uid"
 								value="<%=session.getAttribute("id")%>">
 						</div>

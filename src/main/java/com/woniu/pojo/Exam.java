@@ -1,5 +1,5 @@
 package com.woniu.pojo;
-// Generated 2019-12-20 11:15:59 by Hibernate Tools 5.4.7.Final
+// Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final
 
 import java.util.Date;
 
@@ -8,60 +8,76 @@ import java.util.Date;
  */
 public class Exam implements java.io.Serializable {
 
-	private Integer eid;
+	private Integer eId;
+	private Stage stage;
 	private Student student;
-	private Integer staId;
-	private Integer escore;
+	private String escore;
 	private Date edate;
 
 	public Exam() {
 	}
 
-	public Exam(Student student, Integer staId, Integer escore, Date edate) {
+	public Exam(Integer eId, Stage stage, Student student, String escore, Date edate) {
+		super();
+		this.eId = eId;
+		this.stage = stage;
 		this.student = student;
-		this.staId = staId;
 		this.escore = escore;
 		this.edate = edate;
 	}
 
-	public Integer getEid() {
-		return this.eid;
+	public Integer geteId() {
+		return eId;
 	}
 
-	public void setEid(Integer eid) {
-		this.eid = eid;
+	public void seteId(Integer eId) {
+		this.eId = eId;
+	}
+
+	public Stage getStage() {
+		return stage;
+	}
+
+	public void setStage(Stage stage) {
+		this.stage = stage;
 	}
 
 	public Student getStudent() {
-		return this.student;
+		return student;
 	}
 
 	public void setStudent(Student student) {
 		this.student = student;
 	}
 
-	public Integer getStaId() {
-		return this.staId;
+	public String getEscore() {
+		return escore;
 	}
 
-	public void setStaId(Integer staId) {
-		this.staId = staId;
-	}
-
-	public Integer getEscore() {
-		return this.escore;
-	}
-
-	public void setEscore(Integer escore) {
+	public void setEscore(String escore) {
 		this.escore = escore;
 	}
 
 	public Date getEdate() {
-		return this.edate;
+		return edate;
 	}
 
 	public void setEdate(Date edate) {
 		this.edate = edate;
 	}
 
+	@Override
+	public String toString() {
+		return "Exam [eId=" + eId + ", stage=" + stage + ", student=" + student + ", escore=" + escore + ", edate="
+				+ edate + "]";
+	}
+
+	
+
+	
+
+
+	
+
+	
 }

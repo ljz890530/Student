@@ -15,27 +15,27 @@ public class StuDAOImpl implements IStuDAO {
 	SessionFactory sessionFactory;
 	@Override
 	public void save(Student obj) {
-		sessionFactory.openSession().save(obj);
+		sessionFactory.getCurrentSession().save(obj);
 	}
 
 	@Override
 	public void delete(Student obj) {
-		sessionFactory.openSession().delete(obj);
+		sessionFactory.getCurrentSession().delete(obj);
 	}
 
 	@Override
 	public void update(Student obj) {
-		sessionFactory.openSession().update(obj);
+		sessionFactory.getCurrentSession().update(obj);
 	}
 
 	@Override
 	public Student findOne(Integer id) {
-		return sessionFactory.openSession().get(Student.class, id);
+		return sessionFactory.getCurrentSession().get(Student.class, id);
 	}
 
 	@Override
 	public List<Student> findAll() {
-		return sessionFactory.openSession().createCriteria(Student.class).list();
+		return sessionFactory.getCurrentSession().createCriteria(Student.class).list();
 	}
 
 }

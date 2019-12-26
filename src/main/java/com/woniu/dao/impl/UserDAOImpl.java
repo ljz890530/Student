@@ -18,12 +18,12 @@ public class UserDAOImpl implements IUserDAO{
 	
 	@Override
 	public void save(User user) {
-		sessionFctory.openSession().save(user);
+		sessionFctory.getCurrentSession().save(user);
 	}
 
 	@Override
 	public List<User> findAll() {
-		return sessionFctory.openSession().createCriteria(User.class).list();
+		return sessionFctory.getCurrentSession().createCriteria(User.class).list();
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class UserDAOImpl implements IUserDAO{
 	@Override
 	public User findOne(User user) {
 		// TODO Auto-generated method stub
-		Criteria c = sessionFctory.openSession().createCriteria(User.class);
+		Criteria c = sessionFctory.getCurrentSession().createCriteria(User.class);
 		System.out.println(user);
 		System.out.println(c);
 		c.add(Restrictions.eq("uname", user.getUname()));

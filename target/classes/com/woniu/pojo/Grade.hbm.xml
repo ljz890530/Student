@@ -1,31 +1,36 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
-    <class catalog="student" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.woniu.pojo.Grade" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="grade">
-        <id name="gid" type="java.lang.Integer">
-            <column name="gId"/>
-            <generator class="identity"/>
-        </id>
-        <many-to-one class="com.woniu.pojo.Stage" embed-xml="true" fetch="select" insert="true" name="stage" not-found="exception" optimistic-lock="true" unique="false" update="true">
-            <column name="staId"/>
-        </many-to-one>
-        <many-to-one class="com.woniu.pojo.User" embed-xml="true" fetch="select" insert="true" name="userByHid" not-found="exception" optimistic-lock="true" unique="false" update="true">
-            <column name="hId"/>
-        </many-to-one>
-        <many-to-one class="com.woniu.pojo.User" embed-xml="true" fetch="select" insert="true" name="userByTid" not-found="exception" optimistic-lock="true" unique="false" update="true">
-            <column name="tId"/>
-        </many-to-one>
-        <property generated="never" lazy="false" name="gtype" optimistic-lock="true" type="string" unique="false">
-            <column length="10" name="gType"/>
-        </property>
-        <property generated="never" lazy="false" name="gname" optimistic-lock="true" type="string" unique="false">
-            <column length="10" name="gName"/>
-        </property>
-        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="students" optimistic-lock="true" sort="unsorted" table="student">
-            <key on-delete="noaction">
-                <column name="gId"/>
-            </key>
-            <one-to-many class="com.woniu.pojo.Student" embed-xml="true" not-found="exception"/>
-        </set>
-    </class>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final -->
+<hibernate-mapping auto-import="false"
+	default-lazy="false">
+	<class catalog="student" name="com.woniu.pojo.Grade"
+		table="grade">
+		<id name="gid" type="java.lang.Integer">
+			<column name="gId" />
+			<generator class="identity" />
+		</id>
+		<many-to-one class="com.woniu.pojo.Stage" fetch="select"
+			name="stage">
+			<column name="staId" />
+		</many-to-one>
+		<property name="hId">
+			<column name="hId"></column>
+		</property>
+		<property name="tId">
+			<column name="tId"></column>
+		</property>
+		<property lazy="false" name="gtype">
+			<column name="gType" />
+		</property>
+		<property lazy="false" name="gname">
+			<column name="gName" />
+		</property>
+		<set name="students" table="student">
+			<key>
+				<column name="gId" />
+			</key>
+			<one-to-many class="com.woniu.pojo.Student" />
+		</set>
+	</class>
 </hibernate-mapping>

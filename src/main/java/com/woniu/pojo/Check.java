@@ -45,4 +45,10 @@ public class Check implements java.io.Serializable {
 		this.chrecords = chrecords;
 	}
 
+	@Override
+	public String toString() {
+		return "Check [chId=" + chId + ", chName=" + chName + "]";
+	}
+
+	
 }

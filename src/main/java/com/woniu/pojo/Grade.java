@@ -11,8 +11,8 @@ public class Grade implements java.io.Serializable {
 
 	private Integer gid;
 	private Stage stage;
-	private User userByHid;
-	private User userByTid;
+	private Integer hId;
+	private Integer tId;
 	private String gtype;
 	private String gname;
 	private Set students = new HashSet(0);
@@ -20,17 +20,19 @@ public class Grade implements java.io.Serializable {
 	public Grade() {
 	}
 
-	public Grade(Stage stage, User userByHid, User userByTid, String gtype, String gname, Set students) {
+	public Grade(Integer gid, Stage stage, Integer hId, Integer tId, String gtype, String gname, Set students) {
+		super();
+		this.gid = gid;
 		this.stage = stage;
-		this.userByHid = userByHid;
-		this.userByTid = userByTid;
+		this.hId = hId;
+		this.tId = tId;
 		this.gtype = gtype;
 		this.gname = gname;
 		this.students = students;
 	}
 
 	public Integer getGid() {
-		return this.gid;
+		return gid;
 	}
 
 	public void setGid(Integer gid) {
@@ -38,31 +40,31 @@ public class Grade implements java.io.Serializable {
 	}
 
 	public Stage getStage() {
-		return this.stage;
+		return stage;
 	}
 
 	public void setStage(Stage stage) {
 		this.stage = stage;
 	}
 
-	public User getUserByHid() {
-		return this.userByHid;
+	public Integer gethId() {
+		return hId;
 	}
 
-	public void setUserByHid(User userByHid) {
-		this.userByHid = userByHid;
+	public void sethId(Integer hId) {
+		this.hId = hId;
 	}
 
-	public User getUserByTid() {
-		return this.userByTid;
+	public Integer gettId() {
+		return tId;
 	}
 
-	public void setUserByTid(User userByTid) {
-		this.userByTid = userByTid;
+	public void settId(Integer tId) {
+		this.tId = tId;
 	}
 
 	public String getGtype() {
-		return this.gtype;
+		return gtype;
 	}
 
 	public void setGtype(String gtype) {
@@ -70,7 +72,7 @@ public class Grade implements java.io.Serializable {
 	}
 
 	public String getGname() {
-		return this.gname;
+		return gname;
 	}
 
 	public void setGname(String gname) {
@@ -78,11 +80,21 @@ public class Grade implements java.io.Serializable {
 	}
 
 	public Set getStudents() {
-		return this.students;
+		return students;
 	}
 
 	public void setStudents(Set students) {
 		this.students = students;
 	}
 
+	@Override
+	public String toString() {
+		return "Grade [gid=" + gid + ", stage=" + stage + ", hId=" + hId + ", tId=" + tId + ", gtype=" + gtype
+				+ ", gname=" + gname + ", students=" + students + "]";
+	}
+
+	
+	
+
+	
 }
