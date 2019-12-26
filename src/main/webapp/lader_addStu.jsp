@@ -120,7 +120,7 @@
                         <h4 class="page-title">添加学员</h4>
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                        <a href="#" target="_blank"
+                        <a href="lader_excel.jsp" target="_blank"
                             class="btn btn-danger pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">导入学员Excele表
 
                         </a>
