@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="student" extends="struts-default">
+		<action name="addStu" class="ljz_StuAction" method="addStu">
+			<result type="redirectAction">showAllStu.action</result>
+		</action>
+		<action name="showAllStu" class="ljz_StuAction" method="showAllStu">
+			<result>/lader_show.jsp</result>
+		</action>
+		<action name="listChName" class="ljz_CheckAction" method="getCheckName">
+			<result>/lader_addCheck.jsp</result>
+		</action>
+		<action name="saveCheckRecord" class="ljz_CheckAction" method="saveCheckRecord">
+			<result type="redirectAction">showAllChRecord.action</result>
+		</action>
+		<action name="showAllChRecord" class="ljz_CheckAction" method="showCheckRecord">
+			<result>/lader_chRecord.jsp</result>
+		</action>
+		<action name="listGradeName" class="ljz_GradeAction" method="listGrade">
+			<result>/lader_changeClass.jsp</result>
+		</action>
+		<action name="updStuClass" class="ljz_GradeAction" method="updGrade">
+			<result type="redirectAction">showAllStu.action</result>
+		</action>
+	</package>
+</struts>
