@@ -1,7 +1,12 @@
 package com.woniu.action;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+import java.util.UUID;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -22,8 +27,22 @@ public class ljz_GradeAction {
 	private Integer stuId;//接收show页面传过来的stuId
 	private Integer stugId;//接收show页面传过来的stugId
 	private Integer gradeId;
+	private String stuExcelFileName;
+	private File stuExcel;
 	
 	
+	public String getStuExcelFileName() {
+		return stuExcelFileName;
+	}
+	public void setStuExcelFileName(String stuExcelFileName) {
+		this.stuExcelFileName = stuExcelFileName;
+	}
+	public File getStuExcel() {
+		return stuExcel;
+	}
+	public void setStuExcel(File stuExcel) {
+		this.stuExcel = stuExcel;
+	}
 	public Integer getStugId() {
 		return stugId;
 	}
@@ -76,5 +95,32 @@ public class ljz_GradeAction {
 		return "success";
 	}
 	
+	//excel导入学生
+	public String stuExcel() {
+		System.out.println(stuExcelFileName);
+		System.out.println(stuExcel);
+		
+		String realPath = ServletActionContext.getServletContext().getRealPath("/uploadExcel");
+		File file = new File(realPath);
+		if(!file.exists()) {
+			file.mkdirs();
+		}
+		
+		//获得上传文件的后缀
+		String suffix = stuExcelFileName.substring(stuExcelFileName.lastIndexOf(".")); 
+		//获得上传文件的名称（避免重复）
+		String fName = UUID.randomUUID()+suffix;
+		
+		//上传文件
+		try {
+			FileUtils.copyFile(stuExcel,new File(file,fName));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		ig.stuExcel(file+"/"+fName);
+		return "success";
+	}
+
 	
 }

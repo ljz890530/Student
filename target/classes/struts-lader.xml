@@ -25,5 +25,9 @@
 		<action name="updStuClass" class="ljz_GradeAction" method="updGrade">
 			<result type="redirectAction">showAllStu.action</result>
 		</action>
+		<!-- excel导入学生名单 -->
+		<action name="stuExcel" class="ljz_GradeAction" method="stuExcel">
+			<result type="redirectAction">showAllStu.action</result>
+		</action>
 	</package>
 </struts>

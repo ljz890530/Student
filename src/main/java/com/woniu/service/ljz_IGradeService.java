@@ -8,4 +8,5 @@ public interface ljz_IGradeService {
 	void update(Grade grade);
 	Grade findOne(Integer gId);
 	List<Grade> findAll();
+	void stuExcel(String filePath);
 }
