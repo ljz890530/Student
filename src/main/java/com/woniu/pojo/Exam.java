@@ -8,6 +8,80 @@ import java.util.Date;
  */
 public class Exam implements java.io.Serializable {
 
+<<<<<<< HEAD
+	private Integer eId;
+	private Stage stage;
+	private Student student;
+	private String escore;
+	private Date edate;
+
+	public Exam() {
+	}
+
+	public Exam(Integer eId, Stage stage, Student student, String escore, Date edate) {
+		super();
+		this.eId = eId;
+		this.stage = stage;
+		this.student = student;
+		this.escore = escore;
+		this.edate = edate;
+	}
+
+	public Integer geteId() {
+		return eId;
+	}
+
+	public void seteId(Integer eId) {
+		this.eId = eId;
+	}
+
+	public Stage getStage() {
+		return stage;
+	}
+
+	public void setStage(Stage stage) {
+		this.stage = stage;
+	}
+
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	public String getEscore() {
+		return escore;
+	}
+
+	public void setEscore(String escore) {
+		this.escore = escore;
+	}
+
+	public Date getEdate() {
+		return edate;
+	}
+
+	public void setEdate(Date edate) {
+		this.edate = edate;
+	}
+
+	@Override
+	public String toString() {
+		return "Exam [eId=" + eId + ", stage=" + stage + ", student=" + student + ", escore=" + escore + ", edate="
+				+ edate + "]";
+	}
+
+	
+
+	
+
+
+	
+
+	
+=======
 	private Integer eid;
 	private Stage stage;
 	private Student student;
@@ -64,4 +138,5 @@ public class Exam implements java.io.Serializable {
 		this.edate = edate;
 	}
 
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 }

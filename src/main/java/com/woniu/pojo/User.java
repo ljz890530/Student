@@ -16,6 +16,73 @@ public class User implements java.io.Serializable {
 	private Set gradesForTid = new HashSet(0);
 	private Set userRoles = new HashSet(0);
 
+<<<<<<< HEAD
+	public User() {
+	}
+
+	public User(String uname, String upwd, Set gradesForHid, Set gradesForTid, Set userRoles) {
+		this.uname = uname;
+		this.upwd = upwd;
+		this.gradesForHid = gradesForHid;
+		this.gradesForTid = gradesForTid;
+		this.userRoles = userRoles;
+	}
+
+	public Integer getUid() {
+		return this.uid;
+	}
+
+	public void setUid(Integer uid) {
+		this.uid = uid;
+	}
+
+	public String getUname() {
+		return this.uname;
+	}
+
+	public void setUname(String uname) {
+		this.uname = uname;
+	}
+
+	public String getUpwd() {
+		return this.upwd;
+	}
+
+	public void setUpwd(String upwd) {
+		this.upwd = upwd;
+	}
+
+	public Set getGradesForHid() {
+		return this.gradesForHid;
+	}
+
+	public void setGradesForHid(Set gradesForHid) {
+		this.gradesForHid = gradesForHid;
+	}
+
+	public Set getGradesForTid() {
+		return this.gradesForTid;
+	}
+
+	public void setGradesForTid(Set gradesForTid) {
+		this.gradesForTid = gradesForTid;
+	}
+
+	public Set getUserRoles() {
+		return this.userRoles;
+	}
+
+	public void setUserRoles(Set userRoles) {
+		this.userRoles = userRoles;
+	}
+
+	@Override
+	public String toString() {
+		return "User [uid=" + uid + ", uname=" + uname + ", upwd=" + upwd + "]";
+	}
+
+	
+=======
 	@Override
 	public String toString() {
 		return "User [uid=" + uid + ", uname=" + uname + ", upwd=" + upwd + "]";
@@ -79,5 +146,6 @@ public class User implements java.io.Serializable {
 	public void setUserRoles(Set userRoles) {
 		this.userRoles = userRoles;
 	}
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 
 }

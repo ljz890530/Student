@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final -->
+<hibernate-mapping auto-import="false" default-lazy="false">
+ <class catalog="student" name="com.woniu.pojo.Chrecord" table="chrecord">
+  <id name="chReId" type="java.lang.Integer">
+   <column name="chReId"/>
+   <generator class="identity"/>
+  </id>
+  <many-to-one class="com.woniu.pojo.Check" name="check">
+   <column name="chId"/>
+  </many-to-one>
+  <many-to-one class="com.woniu.pojo.Student" name="student">
+   <column name="stuId"/>
+  </many-to-one>
+  <property generated="never" lazy="false" name="chReTime" type="date">
+   <column name="chReTime"/>
+  </property>
+ </class>
+=======
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generated 2019-12-20 10:30:56 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
@@ -16,4 +38,5 @@
             <column name="chId"/>
         </property>
     </class>
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 </hibernate-mapping>

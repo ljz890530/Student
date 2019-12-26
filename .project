@@ -45,4 +45,39 @@
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+<<<<<<< HEAD
+	<linkedResources>
+		<link>
+			<name>src/main/webapp/add_exam.jsp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Desktop/ljz/src/main/webapp/add_exam.jsp</locationURI>
+		</link>
+		<link>
+			<name>src/main/webapp/login.html</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Desktop/ljz/src/main/webapp/login.html</locationURI>
+		</link>
+		<link>
+			<name>src/main/webapp/login.jsp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Desktop/ljz/src/main/webapp/login.jsp</locationURI>
+		</link>
+		<link>
+			<name>src/main/webapp/stu_edit.jsp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Desktop/ljz/src/main/webapp/stu_edit.jsp</locationURI>
+		</link>
+		<link>
+			<name>src/main/webapp/tea_index.jsp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Desktop/ljz/src/main/webapp/tea_index.jsp</locationURI>
+		</link>
+		<link>
+			<name>src/main/webapp/tea_show.jsp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Desktop/ljz/src/main/webapp/tea_show.jsp</locationURI>
+		</link>
+	</linkedResources>
+=======
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 </projectDescription>

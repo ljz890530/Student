@@ -1,3 +1,61 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final -->
+<hibernate-mapping auto-import="false"
+	default-lazy="false">
+	<class catalog="student" name="com.woniu.pojo.Student"
+		table="student">
+		<id name="stuId" type="java.lang.Integer">
+			<column name="stuId" />
+			<generator class="identity" />
+		</id>
+		<many-to-one class="com.woniu.pojo.Grade" name="grade">
+			<column name="gId" />
+		</many-to-one>
+		<property lazy="false" name="stuName">
+			<column name="stuName"/>
+		</property>
+		<property lazy="false" name="stuSex">
+			<column name="stuSex" />
+		</property>
+		<property lazy="false" name="stuCard">
+			<column name="stuCard" />
+		</property>
+		<property lazy="false" name="inTime" type="date">
+			<column name="inTime" />
+		</property>
+		<property lazy="false" name="outTime" type="date">
+			<column name="outTime" />
+		</property>
+		<property lazy="false" name="stuPhone">
+			<column name="stuPhone" />
+		</property>
+		<property lazy="false" name="stuAdd">
+			<column name="stuAdd" />
+		</property>
+		<property lazy="false" name="stuEdu">
+			<column name="stuEdu" />
+		</property>
+		<property lazy="false" name="stuCollege">
+			<column name="stuCollege" />
+		</property>
+		<property lazy="false" name="stuMajor">
+			<column name="stuMajor" />
+		</property>
+		<property lazy="false" name="stuGradu">
+			<column name="stuGradu" />
+		</property>
+		<set fetch="select" inverse="true" name="exams"
+			sort="unsorted" table="exam">
+			<key>
+				<column name="stuId" />
+			</key>
+			<one-to-many class="com.woniu.pojo.Exam" />
+		</set>
+	</class>
+=======
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generated 2019-12-20 10:30:56 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
@@ -49,4 +107,5 @@
             <one-to-many class="com.woniu.pojo.Chrecord" embed-xml="false" not-found="exception"/>
         </set>
     </class>
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 </hibernate-mapping>

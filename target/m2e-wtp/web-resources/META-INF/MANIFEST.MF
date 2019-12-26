@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
+Built-By: lices
+Build-Jdk: 1.8.0_221
+=======
 Built-By: EDZ
 Build-Jdk: 1.8.0_91
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 Created-By: Maven Integration for Eclipse
 

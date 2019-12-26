@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="user" extends="struts-default">
+		<!-- 拦截器配置 -->
+		<interceptors>
+			<!-- 登录拦截器 -->
+			<interceptor name="loginInterceptor" class="com.woniu.util.LoginInterceptor"></interceptor>
+			<!-- 拦截器栈 -->
+			<interceptor-stack name="systemStack">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="loginInterceptor"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<!-- 定义系统默认拦截器 -->
+		<default-interceptor-ref name="systemStack"></default-interceptor-ref>
+		<!-- 全局结果视图 -->
+        <global-results>
+            <result name="login" type="redirect">/login.jsp</result>
+        </global-results>
+		
+		<action name="login" class="userAction" method="login">
+			<result name="student">/lader_show.jsp</result>
+			<result name="teacher">/tea_index.jsp</result>
+		</action>
+		<action name="exit" class="userAction" method="exit">
+			<result name="success">/login.jsp</result>
+		</action>
+	</package>
+</struts>

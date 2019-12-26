@@ -2,6 +2,10 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
+<<<<<<< HEAD
+  <table-filter match-catalog="student" match-name="exam"/>
+=======
   <table-filter match-catalog="student" match-name="chrecord"/>
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
   <table-filter match-catalog="student" match-name="student"/>
 </hibernate-reverse-engineering>

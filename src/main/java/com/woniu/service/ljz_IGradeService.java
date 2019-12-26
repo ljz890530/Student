@@ -8,5 +8,8 @@ public interface ljz_IGradeService {
 	void update(Grade grade);
 	Grade findOne(Integer gId);
 	List<Grade> findAll();
+<<<<<<< HEAD
+=======
 	void stuExcel(String filePath);
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 }

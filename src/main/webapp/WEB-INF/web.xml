@@ -15,6 +15,9 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+<<<<<<< HEAD
+	
+=======
    <!-- 
    在SSH整合的过程中由于Spring容器管理所有的类，这样就会出现在service层调用dao层后其session就会关闭，
    这样当在jsp中用 ${requestScope.person.name} 获取数据时
@@ -29,6 +32,7 @@
 		<url-pattern>*.action</url-pattern>
 	</filter-mapping>
 
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 	<filter>
 		<filter-name>struts2</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>

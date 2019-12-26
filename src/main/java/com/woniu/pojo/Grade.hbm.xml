@@ -1,3 +1,40 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final -->
+<hibernate-mapping auto-import="false"
+	default-lazy="false">
+	<class catalog="student" name="com.woniu.pojo.Grade"
+		table="grade">
+		<id name="gid" type="java.lang.Integer">
+			<column name="gId" />
+			<generator class="identity" />
+		</id>
+		<many-to-one class="com.woniu.pojo.Stage" fetch="select"
+			name="stage">
+			<column name="staId" />
+		</many-to-one>
+		<property name="hId">
+			<column name="hId"></column>
+		</property>
+		<property name="tId">
+			<column name="tId"></column>
+		</property>
+		<property lazy="false" name="gtype">
+			<column name="gType" />
+		</property>
+		<property lazy="false" name="gname">
+			<column name="gName" />
+		</property>
+		<set name="students" table="student">
+			<key>
+				<column name="gId" />
+			</key>
+			<one-to-many class="com.woniu.pojo.Student" />
+		</set>
+	</class>
+=======
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
@@ -28,4 +65,5 @@
             <one-to-many class="com.woniu.pojo.Student" embed-xml="true" not-found="exception"/>
         </set>
     </class>
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 </hibernate-mapping>

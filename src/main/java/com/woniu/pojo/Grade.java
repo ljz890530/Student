@@ -11,6 +11,94 @@ public class Grade implements java.io.Serializable {
 
 	private Integer gid;
 	private Stage stage;
+<<<<<<< HEAD
+	private Integer hId;
+	private Integer tId;
+	private String gtype;
+	private String gname;
+	private Set students = new HashSet(0);
+
+	public Grade() {
+	}
+
+	public Grade(Integer gid, Stage stage, Integer hId, Integer tId, String gtype, String gname, Set students) {
+		super();
+		this.gid = gid;
+		this.stage = stage;
+		this.hId = hId;
+		this.tId = tId;
+		this.gtype = gtype;
+		this.gname = gname;
+		this.students = students;
+	}
+
+	public Integer getGid() {
+		return gid;
+	}
+
+	public void setGid(Integer gid) {
+		this.gid = gid;
+	}
+
+	public Stage getStage() {
+		return stage;
+	}
+
+	public void setStage(Stage stage) {
+		this.stage = stage;
+	}
+
+	public Integer gethId() {
+		return hId;
+	}
+
+	public void sethId(Integer hId) {
+		this.hId = hId;
+	}
+
+	public Integer gettId() {
+		return tId;
+	}
+
+	public void settId(Integer tId) {
+		this.tId = tId;
+	}
+
+	public String getGtype() {
+		return gtype;
+	}
+
+	public void setGtype(String gtype) {
+		this.gtype = gtype;
+	}
+
+	public String getGname() {
+		return gname;
+	}
+
+	public void setGname(String gname) {
+		this.gname = gname;
+	}
+
+	public Set getStudents() {
+		return students;
+	}
+
+	public void setStudents(Set students) {
+		this.students = students;
+	}
+
+	@Override
+	public String toString() {
+		return "Grade [gid=" + gid + ", stage=" + stage + ", hId=" + hId + ", tId=" + tId + ", gtype=" + gtype
+				+ ", gname=" + gname + ", students=" + students + "]";
+	}
+
+	
+	
+
+	
+=======
 	private User userByHid;
 	private User userByTid;
 	private String gtype;
@@ -85,4 +173,5 @@ public class Grade implements java.io.Serializable {
 		this.students = students;
 	}
 
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 }

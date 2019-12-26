@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final -->
+<hibernate-mapping auto-import="false" default-lazy="false">
+ <class name="com.woniu.pojo.Exam" table="exam">
+  <id name="eId" type="java.lang.Integer">
+   <generator class="identity"/>
+  </id>
+  <many-to-one class="com.woniu.pojo.Stage" name="stage">
+   <column name="staId"/>
+  </many-to-one>
+  <many-to-one class="com.woniu.pojo.Student" name="student">
+   <column name="stuId"/>
+  </many-to-one>
+  <property lazy="false" name="escore">
+   <column name="eScore"/>
+  </property>
+  <property lazy="false" name="edate" type="date">
+   <column name="eDate"/>
+  </property>
+ </class>
+=======
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generated 2019-12-18 17:47:01 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
@@ -19,4 +43,5 @@
             <column length="10" name="eDate"/>
         </property>
     </class>
+>>>>>>> branch 'master' of https://github.com/ljz890530/Student.git
 </hibernate-mapping>
